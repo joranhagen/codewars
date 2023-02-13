@@ -1,6 +1,6 @@
 def test_method():
     # run the method to test here
-    print("test")
+    print("testing")
 
 
 if __name__ == 'main':
