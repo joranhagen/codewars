@@ -14,4 +14,5 @@ def get_permutations(s):
 
 if __name__ == '__main__':
     # input function to test
+    # adding random comment
     print("Testing...")
