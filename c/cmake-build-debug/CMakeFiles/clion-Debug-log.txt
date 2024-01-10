@@ -1,0 +1,4 @@
+/home/macvanish/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/macvanish/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/ninja/linux/x64/ninja -G Ninja -S /home/macvanish/workspaces/private/codewars/c -B /home/macvanish/workspaces/private/codewars/c/cmake-build-debug
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/macvanish/workspaces/private/codewars/c/cmake-build-debug
