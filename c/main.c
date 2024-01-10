@@ -8,12 +8,5 @@
 #include "solutions.h"
 
 int main(void) {
-    const char *const names[4] = {"Peter", "Marnie", "Friends", "More Friends"};
-    char *submitted = likes(4, names);
-    printf("%s", submitted);
 
-    free(submitted);
-    submitted = NULL;
-
-    return EXIT_SUCCESS;
 }

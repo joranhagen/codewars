@@ -27,3 +27,10 @@ char *likes(size_t n, const char *const names[n]) {
     }
     return result;
 }
+
+uint32_t ip_to_uint32(const char *ip) {
+    unsigned char bytes[4] = {0};
+    sscanf(ip, "%hhu.%hhu.%hhu.%hhu", &bytes[0], &bytes[1], &bytes[2], &bytes[3]);
+    return (uint32_t) (bytes[0]) << 24 | (uint32_t) (bytes[1]) << 16 | (uint32_t) (bytes[2]) << 8 |
+           (uint32_t) (bytes[3]);
+}
