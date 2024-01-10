@@ -3,17 +3,9 @@ This repository contains the solutions or work-in-progress solutions for the pro
 
 Secondarily, this repository acts as a way for me to practise random programming related problems and skills. One of these is making readable and usefull **README** files for my repositories (difficulty impossible).
 
-> Test table
-
-| Syntax | Description |
-| ----------- | ----------- |
-| Header | Title |
-| Paragraph | Text | 
-
-## Languages to start
+## Languages
 - [x] Python
-- [ ] Java
-- [ ] C#
-- [ ] C
+- [X] C
 - [ ] C++
 - [ ] Rust
+- [ ] Haskell
