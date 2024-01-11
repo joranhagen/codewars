@@ -20,4 +20,11 @@ char *likes(size_t n, const char *const names[n]);
  */
 uint32_t ip_to_uint32(const char *ip);
 
+
+/*
+ * Counting Duplicates
+ * https://www.codewars.com/kata/54bf1c2cd5b56cc47f0007a1
+ */
+size_t duplicate_count(const char *input);
+
 #endif //C_SOLUTIONS_H
