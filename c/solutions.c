@@ -5,6 +5,54 @@
 #include "solutions.h"
 #include <stdio.h>
 #include <ctype.h>
+#include <string.h>
+
+void spin_words(const char *sentence, char *result) {
+    while (*sentence != '\0') {
+        const char *end = strchr(sentence, ' ') != NULL ? strchr(sentence, ' ') : strchr(sentence, '\0');
+        int length = (end - sentence);
+        if (length > 4) {
+            for (int i = 0; i < length; ++i) {
+                result[i] = sentence[length - 1 - i];
+            }
+        } else strncpy(result, sentence, length);
+        sentence = (*end != '\0') ? end + 1 : end;
+        result += length;
+        *(result++) = (*end != '\0') ? ' ' : '\0';
+    }
+    *result = '\0';
+}
+
+int *parse(const char *program) {
+    int *my_arr = NULL;
+    int n = 0;
+    size_t arr_size = 0;
+    while (*program != '\0') {
+        if (*program == 'i') n++;
+        else if (*program == 'd') n--;
+        else if (*program == 's') n *= n;
+        else if (*program == 'o') {
+            my_arr = realloc(my_arr, (arr_size + 1) * sizeof(int));
+            my_arr[arr_size++] = n;
+        }
+        program++;
+    }
+    return my_arr;
+}
+
+void filter_friends(const char *names[]) {
+    if (!names) return;
+    size_t foes = 0;
+    size_t friends = 0;
+    for (size_t i = 0; names[i] != NULL; ++i) {
+        if (strlen(names[i]) != 4) foes++;
+        else {
+            friends++;
+            names[i - foes] = names[i];
+        }
+    }
+    names[friends] = NULL;
+}
 
 size_t duplicate_count(const char *input) {
     int occ[36] = {0};
@@ -44,4 +92,13 @@ char *likes(size_t n, const char *const names[n]) {
             break;
     }
     return result;
+}
+
+size_t count_occurrences(const char *input, char c) {
+    size_t count = 0;
+    while (*input != '\0') {
+        if (*input == c) count++;
+        input++;
+    }
+    return count;
 }
