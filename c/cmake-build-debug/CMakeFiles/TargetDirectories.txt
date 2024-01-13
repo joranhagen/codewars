@@ -1,3 +1,0 @@
-/home/macvanish/workspaces/private/codewars/c/cmake-build-debug/CMakeFiles/c.dir
-/home/macvanish/workspaces/private/codewars/c/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/macvanish/workspaces/private/codewars/c/cmake-build-debug/CMakeFiles/rebuild_cache.dir
