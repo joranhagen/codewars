@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 #include "solutions.h"
 
@@ -6,10 +7,10 @@
 // solutions.c contains the solution
 
 int main(void) {
-    const char *ip = "128.128.128.128";
-    uint32_t ip_int = ip_to_uint32(ip);
-    char new_ip[16];
-    uint32_to_ip(ip_int, new_ip);
-    printf("%s", new_ip);
+    const char *words = "is2 Thi1s T4est 3a";
+    char *ordered = malloc(strlen(words) + 1);
+    order_words(ordered, words);
+    printf("%s", ordered);
+    free(ordered);
     return 0;
 }

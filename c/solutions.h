@@ -9,6 +9,12 @@
 #include <stdint.h>
 
 /*
+ * Your order, please
+ * https://www.codewars.com/kata/55c45be3b2079eccff00010f
+ */
+char *order_words (char *ordered, const char *words);
+
+/*
  * Stop gninnipS My sdroW!
  * https://www.codewars.com/kata/5264d2b162488dc400000001
  */

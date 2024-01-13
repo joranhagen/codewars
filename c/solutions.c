@@ -3,9 +3,31 @@
 //
 
 #include "solutions.h"
+
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
+
+
+char *order_words(char *ordered, const char *words) {
+    if (*words == '\0') {
+        *ordered = '\0';
+        return ordered;
+    }
+    char *copy = ordered;
+    char *word, *end;
+    ordered[strlen(words)] = '\0';
+    for (int i = 1; i <= 9; ++i) {
+        word = strchr(words, '0' + i);
+        if (word == NULL) break;
+        while (word != words && *(word - 1) != ' ') word--;
+        end = strchr(word, ' ') != NULL ? strchr(word, ' ') : strchr(word, '\0');
+        strncpy(ordered, word, end - word);
+        ordered += (end - word);
+        if (strlen(ordered) > 1) *(ordered++) = ' ';
+    }
+    return copy;
+}
 
 void spin_words(const char *sentence, char *result) {
     while (*sentence != '\0') {
@@ -55,7 +77,7 @@ uint32_t ip_to_uint32(const char *ip) {
 void uint32_to_ip(uint32_t ip_value, char *ip_buffer) {
     unsigned char bytes[4];
     for (int i = 0; i < 4; ++i) {
-        bytes[i] = (ip_value >> (24 - 8*i)) & 0xFF;
+        bytes[i] = (ip_value >> (24 - 8 * i)) & 0xFF;
     }
     sprintf(ip_buffer, "%hhu.%hhu.%hhu.%hhu", bytes[0], bytes[1], bytes[2], bytes[3]);
 }
