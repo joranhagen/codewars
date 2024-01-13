@@ -52,6 +52,15 @@ uint32_t ip_to_uint32(const char *ip) {
     return bytes[0] << 24 | bytes[1] << 16 | bytes[2] << 8 | bytes[3];
 }
 
+void uint32_to_ip(uint32_t ip_value, char *ip_buffer) {
+    unsigned char bytes[4];
+    for (int i = 0; i < 4; ++i) {
+        bytes[i] = (ip_value >> (24 - 8*i)) & 0xFF;
+    }
+    sprintf(ip_buffer, "%hhu.%hhu.%hhu.%hhu", bytes[0], bytes[1], bytes[2], bytes[3]);
+}
+
+
 size_t duplicate_count(const char *input) {
     int occ[36] = {0};
     for (; *input != '\0'; input++) {

@@ -25,6 +25,7 @@ char *likes(size_t n, const char *const names[n]);
  * https://www.codewars.com/kata/52ea928a1ef5cfec800003ee
  */
 uint32_t ip_to_uint32(const char *ip);
+void uint32_to_ip(const uint32_t ip_int, char *ip_buffer);
 
 /*
  * Counting Duplicates

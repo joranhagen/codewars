@@ -51,13 +51,13 @@ build cmake_object_order_depends_target_c: phony || CMakeFiles/c.dir
 
 build CMakeFiles/c.dir/main.c.o: C_COMPILER__c_Debug /home/macvanish/workspaces/private/codewars/c/main.c || cmake_object_order_depends_target_c
   DEP_FILE = CMakeFiles/c.dir/main.c.o.d
-  FLAGS = -g -fdiagnostics-color=always -Wall -Wextra -pedantic -Werror -fsanitize=address -std=gnu2x
+  FLAGS = -g -fdiagnostics-color=always -fsanitize=address -std=gnu2x
   OBJECT_DIR = CMakeFiles/c.dir
   OBJECT_FILE_DIR = CMakeFiles/c.dir
 
 build CMakeFiles/c.dir/solutions.c.o: C_COMPILER__c_Debug /home/macvanish/workspaces/private/codewars/c/solutions.c || cmake_object_order_depends_target_c
   DEP_FILE = CMakeFiles/c.dir/solutions.c.o.d
-  FLAGS = -g -fdiagnostics-color=always -Wall -Wextra -pedantic -Werror -fsanitize=address -std=gnu2x
+  FLAGS = -g -fdiagnostics-color=always -fsanitize=address -std=gnu2x
   OBJECT_DIR = CMakeFiles/c.dir
   OBJECT_FILE_DIR = CMakeFiles/c.dir
 
