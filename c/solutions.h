@@ -9,6 +9,24 @@
 #include <stdint.h>
 
 /*
+ * WeIrD StRiNg CaSe
+ * https://www.codewars.com/kata/52b757663a95b11b3d00062d
+ */
+char *to_weird_case (char *string);
+
+/*
+ * Greed is Good
+ * https://www.codewars.com/kata/5270d0d18625160ada0000e4
+ */
+int score(const int dice[5]);
+
+/*
+ * Equal Sides Of An Array
+ * https://www.codewars.com/kata/5679aa472b8f57fb8c000047
+ */
+int find_even_index(const int *values, int length);
+
+/*
  * Your order, please
  * https://www.codewars.com/kata/55c45be3b2079eccff00010f
  */

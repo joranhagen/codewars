@@ -8,6 +8,48 @@
 #include <ctype.h>
 #include <string.h>
 
+char *to_weird_case(char *string) {
+    int i = 0;
+    while(string[i] != '\0') {
+        if (string[i] == ' ') i++;
+        string[i] = toupper(string[i]);
+        i++;
+        string[i] = tolower(string[i]);
+        i++;
+    }
+    return string;
+}
+
+
+
+
+int score(const int dice[5]) {
+    int sum = 0;
+    int rolls[6] = {0};
+    for (int i = 0; i < 5; ++i) rolls[dice[i] - 1]++;
+    for (int i = 0; i < 6; ++i) {
+        if (rolls[i] >= 3) {
+            sum += (i == 0) ? 1000 : (i + 1) * 100;
+            rolls[i] -= 3;
+        }
+    }
+    sum += rolls[0] * 100 + rolls[4] * 50;
+    return sum;
+}
+
+int find_even_index(const int *values, int length) {
+    int sum_right = 0;
+    for (int i = length - 1; i >= 0; --i) {
+        sum_right += values[i];
+    }
+    int sum_left = 0;
+    for (int i = 0; i < length; ++i) {
+        sum_right -= values[i];
+        if (sum_left == sum_right) return i;
+        sum_left += values[i];
+    }
+    return -1;
+}
 
 char *order_words(char *ordered, const char *words) {
     if (*words == '\0') {
