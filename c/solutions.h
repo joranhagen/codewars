@@ -71,8 +71,9 @@ void filter_friends (const char *names[]);
 int *parse (const char *program);
 
 /*
-* Helper function. Made to help print the result from `int *parse (const char *program);`
+* Helper functions
  */
 size_t count_occurrences(const char* input, char c);
+char * get_string(const char* input);
 
 #endif //C_SOLUTIONS_H

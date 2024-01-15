@@ -1,7 +1,6 @@
 //
 // Created by macvanish on 10/01/24.
 //
-
 #include "solutions.h"
 
 #include <stdio.h>
@@ -10,18 +9,16 @@
 
 char *to_weird_case(char *string) {
     int i = 0;
-    while(string[i] != '\0') {
+    while (string[i] != '\0') {
         if (string[i] == ' ') i++;
-        string[i] = toupper(string[i]);
+        string[i] = toupper(i[string]);
         i++;
-        string[i] = tolower(string[i]);
-        i++;
-    }
+        if (*(string + i) == '\0') break;
+        i[string] = tolower(string[i]);
+        ++i;
+    }cd
     return string;
 }
-
-
-
 
 int score(const int dice[5]) {
     int sum = 0;
@@ -118,9 +115,7 @@ uint32_t ip_to_uint32(const char *ip) {
 
 void uint32_to_ip(uint32_t ip_value, char *ip_buffer) {
     unsigned char bytes[4];
-    for (int i = 0; i < 4; ++i) {
-        bytes[i] = (ip_value >> (24 - 8 * i)) & 0xFF;
-    }
+    for (int i = 0; i < 4; ++i) bytes[i] = (ip_value >> (24 - 8 * i)) & 0xFF;
     sprintf(ip_buffer, "%hhu.%hhu.%hhu.%hhu", bytes[0], bytes[1], bytes[2], bytes[3]);
 }
 
@@ -174,4 +169,9 @@ size_t count_occurrences(const char *input, char c) {
         input++;
     }
     return count;
+}
+
+char *get_string(const char *input) {
+    char *new_input = malloc(strlen(input) + 1);
+    return strcpy(new_input, input);
 }
