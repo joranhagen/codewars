@@ -7,6 +7,15 @@
 #include <ctype.h>
 #include <string.h>
 
+int **multiplication_table(int n) {
+    int **table = malloc(n * sizeof(int *));
+    for (int i = 0; i < n; ++i) {
+        table[i] = malloc(n * sizeof(int));
+        for (int j = 0; j < n; ++j) table[i][j] = (i + 1) * (j + 1);
+    }
+    return table;
+}
+
 char *to_weird_case(char *string) {
     int i = 0;
     while (string[i] != '\0') {
@@ -16,7 +25,7 @@ char *to_weird_case(char *string) {
         if (*(string + i) == '\0') break;
         i[string] = tolower(string[i]);
         ++i;
-    }cd
+    }
     return string;
 }
 

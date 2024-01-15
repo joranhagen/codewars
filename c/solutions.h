@@ -7,6 +7,11 @@
 
 #include <stdlib.h>
 #include <stdint.h>
+/*
+ * Multiplication table
+ * https://www.codewars.com/kata/534d2f5b5371ecf8d2000a08
+ */
+int **multiplication_table(int n);
 
 /*
  * WeIrD StRiNg CaSe
