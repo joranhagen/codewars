@@ -159,12 +159,14 @@ int *parse(const char *program) {
     int n = 0;
     size_t arr_size = 0;
     while (*program != '\0') {
-        if (*program == 'i') n++;
-        else if (*program == 'd') n--;
-        else if (*program == 's') n *= n;
-        else if (*program == 'o') {
-            my_arr = realloc(my_arr, (arr_size + 1) * sizeof(int));
-            my_arr[arr_size++] = n;
+        switch (*program) {
+            case 'i': n++; break;
+            case 'd': n--; break;
+            case 's': n*= n; break;
+            case 'o':
+                my_arr = realloc(my_arr, (arr_size + 1) * sizeof(int));
+                my_arr[arr_size++] = n;
+                break;
         }
         program++;
     }

@@ -9,3 +9,5 @@ Secondarily, this repository acts as a way for me to practise random programming
 - [ ] C++
 - [ ] Rust
 - [ ] Haskell
+- [ ] Ruby
+- [ ] Lua
